@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pengingat Kuliah & Tugas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TO DO LIST PENGINGAT JADWAL KULIAH
+            <p id="greeting" class="date-time"></p>
+<p id="tanggal-hari-jam" class="date-time"></p>
+
+        </h1>
+    </header>
+
+    <main>
+        <section id="input-area">
+            <h2>Tambah Tugas Baru</h2>
+            <form id="task-form">
+                <input type="text" id="task-name" placeholder="Nama Tugas/Deskripsi Singkat" required>
+                <select id="task-course" required>
+                    <option value="">-- Pilih Mata Kuliah --</option>
+                </select>
+                <input type="datetime-local" id="task-deadline" required>
+                <button type="submit">Simpan Tugas</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="task-list-area">
+            <h2>Daftar Tugas (Deadline)</h2>
+            <div class="filter-controls">
+                <label for="filter-status">Filter Tampilan:</label>
+                <select id="filter-status">
+                    <option value="todo">Belum Dikerjakan</option>
+                    <option value="all">Semua Tugas</option>
+                    <option value="completed">Selesai</option>
+                </select>
+            </div>
+            
+            <table id="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Tugas</th>
+                        <th>Mata Kuliah</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks-body">
+                    </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyek Pengingat Tugas KELOMPOK 3 &copy; 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* --- Input Form Styling (Grid Layout) --- */
+#task-form {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 0.5fr;
+    gap: 15px;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+#task-form input, #task-form select, #task-form button {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+#task-form button {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#task-form button:hover {
+    background-color: #218838;
+}
+
+/* --- Table & Filter Styling --- */
+.filter-controls {
+    margin: 20px 0;
+    padding: 10px 0;
+}
+#tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+#tasks-table th, #tasks-table td {
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: middle;
+}
+#tasks-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* --- WARNING STYLES (FITUR UTAMA) --- */
+
+/* Peringatan Merah: Lewat Deadline (Belum Selesai) */
+.warning-red {
+    background-color: #dc3545; /* Merah */
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Peringatan Kuning: Mendekati Deadline (< 24 Jam) */
+.warning-yellow {
+    background-color: #ffc107; /* Kuning */
+    color: #343a40;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Tampilan Tugas Selesai */
+.completed-task {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Tombol Hapus */
+#tasks-table button {
+    background: #f00;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 1px solid #e9ecef;
+    color: #6c757d;
+}
+.date-time {
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #eeeaeb;
+}
